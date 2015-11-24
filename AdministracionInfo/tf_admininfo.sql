@@ -1,5 +1,5 @@
-use tf_admininfo;
-
+CREATE DATABASE  IF NOT EXISTS `tf_admininfo` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `tf_admininfo`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win64 (x86_64)
 --
 -- Host: localhost    Database: tf_admininfo
@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `barra_principal`;
 CREATE TABLE `barra_principal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(80) NOT NULL,
-  `codigo` varchar(3) DEFAULT NULL,
+  `codigo` varchar(3) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -147,7 +147,7 @@ CREATE TABLE `circuito_por_minuto` (
   `id_centro_costo` int(11) NOT NULL,
   `fecha_registro` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,6 +156,7 @@ CREATE TABLE `circuito_por_minuto` (
 
 LOCK TABLES `circuito_por_minuto` WRITE;
 /*!40000 ALTER TABLE `circuito_por_minuto` DISABLE KEYS */;
+INSERT INTO `circuito_por_minuto` VALUES (1,1,'demo','aa',45,0.06,1,1,1,'2015-11-22 20:18:30'),(2,2,'demo 2','aaa ',40,0.45,1,1,1,'2015-11-22 21:27:49'),(3,3,'demo 5','bbb',80,0.67,2,2,2,'2015-11-22 21:27:49'),(4,4,'hola','jkkjhhj',120,0.89,2,2,2,'2015-11-22 21:27:49'),(5,5,'ccc','ssd',25,0.45,2,2,2,'2015-11-22 21:27:49');
 /*!40000 ALTER TABLE `circuito_por_minuto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -168,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-22 19:42:14
+-- Dump completed on 2015-11-23 23:35:52
