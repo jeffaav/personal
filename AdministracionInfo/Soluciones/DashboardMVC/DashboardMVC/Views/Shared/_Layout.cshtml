@@ -7,10 +7,9 @@
     @Styles.Render("~/bundle-css")
 </head>
 <body>
+    @Scripts.Render("~/bundle-js")
     <div class="container body-content">
         @RenderBody()
     </div>
-    @Scripts.Render("~/bundle-js")
-    @RenderSection("Scripts")
 </body>
 </html>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DashboardMVC.Repositories
 {
-    public class BaseRepository<T> where T : class
+    public class BaseRepository
     {
         private MySqlConnection connection;
         public MySqlConnection Connection 

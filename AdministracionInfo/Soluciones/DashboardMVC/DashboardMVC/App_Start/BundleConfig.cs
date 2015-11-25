@@ -17,8 +17,10 @@ namespace DashboardMVC
 
             bundles.Add(new ScriptBundle("~/bundle-js").Include(
                 "~/Scripts/jquery-2.1.4.js",
+                "~/Scripts/jquery.unobtrusive-ajax.js",
                 "~/Scripts/modernizr-2.6.2.js",
                 "~/Scripts/bootstrap.js",
+                "~/Scripts/tab.js",
                 "~/Scripts/d3.js",
                 "~/Scripts/linq.js"
             ));

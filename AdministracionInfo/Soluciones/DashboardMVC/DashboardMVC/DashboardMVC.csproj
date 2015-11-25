@@ -119,8 +119,11 @@
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.linq.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\linq.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\tab.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -134,8 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Circuito.cs" />
     <Compile Include="Models\ConsolidadoBarraPrincipal.cs" />
+    <Compile Include="Models\ConsolidadoBarraSecundaria.cs" />
+    <Compile Include="Models\ConsolidadoCentroCostos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ConsolidadoRepository.cs" />
@@ -144,6 +148,9 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Home\_ConsolidadoBarrasPrincipales.cshtml" />
+    <Content Include="Views\Home\_ConsolidadoBarrasSecundarias.cshtml" />
+    <Content Include="Views\Home\_ConsolidadoCentroCostos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

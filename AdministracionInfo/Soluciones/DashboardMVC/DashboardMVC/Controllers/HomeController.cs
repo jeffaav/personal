@@ -17,11 +17,43 @@ namespace DashboardMVC.Controllers
             return View();
         }
 
-        public JsonResult ObtenerConsolidado()
+        public ActionResult ConsolidadoBarrasPrincipales()
         {
-            var circuitos = consolidadoRepository.ObtenerConsolidadoConsumoBarraPrincipal();
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoBarraPrincipal();
+            return PartialView("_ConsolidadoBarrasPrincipales", consolidado);
+        }
 
-            return Json(circuitos, JsonRequestBehavior.AllowGet);
+        public ActionResult ConsolidadoBarrasSecundarias()
+        {
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoBarraSecundaria();
+            return PartialView("_ConsolidadoBarrasSecundarias", consolidado);
+        }
+
+        public ActionResult ConsolidadoCentroCostos()
+        {
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoCentroCostos();
+            return PartialView("_ConsolidadoCentroCostos", consolidado);
+        }
+
+        public JsonResult DataConsolidadoConsumoBarraPrincipal()
+        {
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoBarraPrincipal();
+
+            return Json(consolidado, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DataConsolidadoConsumoBarraSecundaria()
+        {
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoBarraSecundaria();
+
+            return Json(consolidado, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DataConsolidadoConsumoCentroCostos()
+        {
+            var consolidado = consolidadoRepository.ObtenerConsolidadoConsumoCentroCostos();
+
+            return Json(consolidado, JsonRequestBehavior.AllowGet);
         }
 
 
