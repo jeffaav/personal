@@ -23,3 +23,4 @@ C:\GIT\personal\AdministracionInfo\Soluciones\DashboardMVC\DashboardMVC\bin\Syst
 C:\GIT\personal\AdministracionInfo\Soluciones\DashboardMVC\DashboardMVC\bin\System.Web.Mvc.xml
 C:\GIT\personal\AdministracionInfo\Soluciones\DashboardMVC\DashboardMVC\obj\Debug\DashboardMVC.dll
 C:\GIT\personal\AdministracionInfo\Soluciones\DashboardMVC\DashboardMVC\obj\Debug\DashboardMVC.pdb
+C:\GIT\personal\AdministracionInfo\Soluciones\DashboardMVC\DashboardMVC\bin\MySql.Data.dll

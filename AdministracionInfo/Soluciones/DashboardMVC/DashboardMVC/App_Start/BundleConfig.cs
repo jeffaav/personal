@@ -16,10 +16,11 @@ namespace DashboardMVC
             ));
 
             bundles.Add(new ScriptBundle("~/bundle-js").Include(
-                "~/Scritps/jquery-2.1.4.js",
-                "~/Scritps/modernizr-2.6.2.js",
-                "~/Scritps/bootstrap.js",
-                "~/Scritps/d3.js"
+                "~/Scripts/jquery-2.1.4.js",
+                "~/Scripts/modernizr-2.6.2.js",
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/d3.js",
+                "~/Scripts/linq.js"
             ));
 
             BundleTable.EnableOptimizations = true;
