@@ -92,10 +92,16 @@
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+            <parameter>            <name>ruta_salida</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;ruta_salida&#x7d;</value>
+            </parameter>            <parameter>            <name>separador_coma</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;separador_coma&#x7d;</value>
+            </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
+      <xloc>384</xloc>
       <yloc>208</yloc>
       </entry>
     <entry>
@@ -106,8 +112,8 @@
       <serverport>22</serverport>
       <username>root</username>
       <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
-      <sftpdirectory>&#x2f;var&#x2f;www&#x2f;html&#x2f;fuentes</sftpdirectory>
-      <localdirectory>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Salidas</localdirectory>
+      <sftpdirectory>&#x24;&#x7b;ruta_archivos_procesados&#x7d;</sftpdirectory>
+      <localdirectory>&#x24;&#x7b;ruta_salida&#x7d;</localdirectory>
       <wildcard>.&#x2a;&#x5c;.&#x2a;</wildcard>
       <copyprevious>N</copyprevious>
       <copypreviousfiles>N</copypreviousfiles>
@@ -129,53 +135,41 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>592</xloc>
       <yloc>208</yloc>
       </entry>
     <entry>
-      <name>Moviendo archvios</name>
+      <name>Set variables</name>
       <description/>
-      <type>TRANS</type>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;ETL_Mover_Archivos.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>ruta_salida</variable_name>
+          <variable_value>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Salidas&#x5c;</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>separador_coma</variable_name>
+          <variable_value>,</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>ruta_archivos_procesados</variable_name>
+          <variable_value>&#x2f;var&#x2f;www&#x2f;html&#x2f;procesados</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>192</yloc>
+      <xloc>256</xloc>
+      <yloc>208</yloc>
       </entry>
   </entries>
   <hops>
-    <hop>
-      <from>START</from>
-      <to>Generacion de reportes</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
     <hop>
       <from>Generacion de reportes</from>
       <to>Subiendo archivos a Debian</to>
@@ -186,8 +180,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Subiendo archivos a Debian</from>
-      <to>Moviendo archvios</to>
+      <from>START</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>Generacion de reportes</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

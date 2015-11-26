@@ -106,8 +106,8 @@
     <proxyPassword>Encrypted </proxyPassword>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
+      <xloc>176</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
