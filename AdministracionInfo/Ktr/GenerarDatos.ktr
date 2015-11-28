@@ -76,13 +76,13 @@
   </notepads>
   <connection>
     <name>Tf admin</name>
-    <server>localhost</server>
+    <server>192.168.26.132</server>
     <type>MYSQL</type>
     <access>Native</access>
     <database>tf_admininfo</database>
     <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <username>debian</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79aa75dc9baed4</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -105,7 +105,6 @@
   <hop> <from>circuito</from><to>Generate random stuff</to><enabled>Y</enabled> </hop>
   <hop> <from>Generate random stuff</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Microsoft Excel Output</to><enabled>Y</enabled> </hop>
-  <hop> <from>Microsoft Excel Output</from><to>Insert &#x2f; Update</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Generate random stuff</name>
@@ -150,131 +149,6 @@
     </step>
 
   <step>
-    <name>Insert &#x2f; Update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Tf admin</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>circuito_por_minuto</table>
-      <key>
-        <name>numero</name>
-        <field>nro_circuito</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>codigo</name>
-        <field>codigo_medidor</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>id_barra_principal</name>
-        <field>id_barra_principal</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>id_barra_secundaria</name>
-        <field>id_barra_secundaria</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>id_centro_costo</name>
-        <field>id_centro_costo</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>consumo</name>
-        <field>consumo_kwh</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>perdida</name>
-        <field>porcentaje_perdida_consumo</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>fecharegistro</name>
-        <field>fecha_registro</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>id_barra_principal</name>
-        <rename>id_barra_principal</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>id_barra_secundaria</name>
-        <rename>id_barra_secundaria</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>id_centro_costo</name>
-        <rename>id_centro_costo</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>codigo_medidor</name>
-        <rename>codigo</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>nro_circuito</name>
-        <rename>numero</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>fecha_registro</name>
-        <rename>fecharegistro</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>porcentaje_perdida_consumo</name>
-        <rename>perdida</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>consumo_kwh</name>
-        <rename>consumo</rename>
-        <update>N</update>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>576</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Microsoft Excel Output</name>
     <type>ExcelOutput</type>
     <description/>
@@ -291,13 +165,13 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Salidas&#x5c;circuito.xls</name>
+      <name>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Salidas&#x5c;circuito</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <create_parent_folder>N</create_parent_folder>
+      <create_parent_folder>Y</create_parent_folder>
       <split>N</split>
-      <add_date>Y</add_date>
-      <add_time>Y</add_time>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
       <date_time_format/>
       <sheetname>Sheet1</sheetname>

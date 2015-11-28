@@ -61,11 +61,11 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>192</xloc>
-      <yloc>256</yloc>
+      <xloc>80</xloc>
+      <yloc>128</yloc>
       </entry>
     <entry>
-      <name>Transformation</name>
+      <name>Generar Datos</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
@@ -94,19 +94,186 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
-      <yloc>256</yloc>
+      <xloc>224</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Subiendo archivos a Debian 2</name>
+      <description/>
+      <type>SFTPPUT</type>
+      <servername>192.168.26.132</servername>
+      <serverport>22</serverport>
+      <username>root</username>
+      <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+      <sftpdirectory>&#x2f;var&#x2f;www&#x2f;html&#x2f;fuentes</sftpdirectory>
+      <localdirectory>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Salidas</localdirectory>
+      <wildcard>.&#x2a;&#x5c;.&#x2a;</wildcard>
+      <copyprevious>N</copyprevious>
+      <copypreviousfiles>N</copypreviousfiles>
+      <addFilenameResut>N</addFilenameResut>
+      <usekeyfilename>N</usekeyfilename>
+      <keyfilename/>
+      <keyfilepass>Encrypted </keyfilepass>
+      <compression>none</compression>
+      <proxyType/>
+      <proxyHost/>
+      <proxyPort/>
+      <proxyUsername/>
+      <proxyPassword>Encrypted </proxyPassword>
+      <createRemoteFolder>Y</createRemoteFolder>
+      <aftersftpput>nothing</aftersftpput>
+      <destinationfolder/>
+      <createdestinationfolder>N</createdestinationfolder>
+      <successWhenNoFile>N</successWhenNoFile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>368</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Get a file with SFTP</name>
+      <description/>
+      <type>SFTP</type>
+      <servername>192.168.26.132</servername>
+      <serverport>22</serverport>
+      <username>root</username>
+      <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+      <sftpdirectory>&#x2f;var&#x2f;www&#x2f;html&#x2f;fuentes</sftpdirectory>
+      <targetdirectory>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;Temporal</targetdirectory>
+      <wildcard>.&#x2a;&#x5c;.xls</wildcard>
+      <remove>Y</remove>
+      <isaddresult>Y</isaddresult>
+      <createtargetfolder>Y</createtargetfolder>
+      <copyprevious>N</copyprevious>
+      <usekeyfilename>N</usekeyfilename>
+      <keyfilename/>
+      <keyfilepass>Encrypted </keyfilepass>
+      <compression>none</compression>
+      <proxyType/>
+      <proxyHost/>
+      <proxyPort/>
+      <proxyUsername/>
+      <proxyPassword>Encrypted </proxyPassword>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>512</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>insertarBD</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;InsertarBD.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>656</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Subiendo procesados a Debian</name>
+      <description/>
+      <type>SFTPPUT</type>
+      <servername>192.168.26.132</servername>
+      <serverport>22</serverport>
+      <username>root</username>
+      <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+      <sftpdirectory>&#x2f;var&#x2f;www&#x2f;html&#x2f;procesados</sftpdirectory>
+      <localdirectory>C&#x3a;&#x5c;Users&#x5c;HP&#x5c;Desktop&#x5c;procesados</localdirectory>
+      <wildcard>.&#x2a;&#x5c;.&#x2a;</wildcard>
+      <copyprevious>N</copyprevious>
+      <copypreviousfiles>N</copypreviousfiles>
+      <addFilenameResut>N</addFilenameResut>
+      <usekeyfilename>N</usekeyfilename>
+      <keyfilename/>
+      <keyfilepass>Encrypted </keyfilepass>
+      <compression>none</compression>
+      <proxyType/>
+      <proxyHost/>
+      <proxyPort/>
+      <proxyUsername/>
+      <proxyPassword>Encrypted </proxyPassword>
+      <createRemoteFolder>Y</createRemoteFolder>
+      <aftersftpput>nothing</aftersftpput>
+      <destinationfolder/>
+      <createdestinationfolder>N</createdestinationfolder>
+      <successWhenNoFile>N</successWhenNoFile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>816</xloc>
+      <yloc>128</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>Transformation</to>
+      <to>Generar Datos</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Generar Datos</from>
+      <to>Subiendo archivos a Debian 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Subiendo archivos a Debian 2</from>
+      <to>Get a file with SFTP</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Get a file with SFTP</from>
+      <to>insertarBD</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>insertarBD</from>
+      <to>Subiendo procesados a Debian</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>

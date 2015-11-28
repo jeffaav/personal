@@ -62,8 +62,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>112</xloc>
-      <yloc>208</yloc>
+      <xloc>96</xloc>
+      <yloc>160</yloc>
       </entry>
     <entry>
       <name>Generacion de reportes</name>
@@ -101,42 +101,8 @@
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>384</xloc>
-      <yloc>208</yloc>
-      </entry>
-    <entry>
-      <name>Subiendo archivos a Debian</name>
-      <description/>
-      <type>SFTPPUT</type>
-      <servername>192.168.26.132</servername>
-      <serverport>22</serverport>
-      <username>root</username>
-      <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
-      <sftpdirectory>&#x24;&#x7b;ruta_archivos_procesados&#x7d;</sftpdirectory>
-      <localdirectory>&#x24;&#x7b;ruta_salida&#x7d;</localdirectory>
-      <wildcard>.&#x2a;&#x5c;.&#x2a;</wildcard>
-      <copyprevious>N</copyprevious>
-      <copypreviousfiles>N</copypreviousfiles>
-      <addFilenameResut>N</addFilenameResut>
-      <usekeyfilename>N</usekeyfilename>
-      <keyfilename/>
-      <keyfilepass>Encrypted </keyfilepass>
-      <compression>none</compression>
-      <proxyType/>
-      <proxyHost/>
-      <proxyPort/>
-      <proxyUsername/>
-      <proxyPassword>Encrypted </proxyPassword>
-      <createRemoteFolder>Y</createRemoteFolder>
-      <aftersftpput>nothing</aftersftpput>
-      <destinationfolder/>
-      <createdestinationfolder>N</createdestinationfolder>
-      <successWhenNoFile>N</successWhenNoFile>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>592</xloc>
-      <yloc>208</yloc>
+      <xloc>368</xloc>
+      <yloc>160</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -165,20 +131,11 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>208</yloc>
+      <xloc>240</xloc>
+      <yloc>160</yloc>
       </entry>
   </entries>
   <hops>
-    <hop>
-      <from>Generacion de reportes</from>
-      <to>Subiendo archivos a Debian</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
     <hop>
       <from>START</from>
       <to>Set variables</to>
